@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="be.bastelstu.josh.globalmodificationlog" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/package.xsd">
+	<packageinformation>
+		<packagename>Global Modificationlog</packagename>
+                <packagename language="de"><![CDATA[Globales Änderungsprotokoll]]></packagename>
+		<packagedescription><![CDATA[This plugin provides a global change log in the ACP.]]></packagedescription>
+		<packagedescription language="de"><![CDATA[Dieses Plugin stellt ein globales Änderungsprotokoll im ACP bereit.]]></packagedescription>
+		<version>1.0.0 Beta 1</version>
+		<date>2014-12-30</date>
+		<license><![CDATA[GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>]]></license>
+	</packageinformation>
+
+	<authorinformation>
+		<author>Joshua Rüsweg</author>
+		<authorurl>https://tims.bastelstu.be/</authorurl>
+	</authorinformation>
+
+	<requiredpackages>
+		<requiredpackage minversion="2.0.9">com.woltlab.wcf</requiredpackage>
+                <requiredpackage minversion="4.0.8">com.woltlab.wbb</requiredpackage>
+	</requiredpackages>
+
+	<instructions type="install">
+		<!-- files -->
+		<instruction type="acpTemplate">acptemplates.tar</instruction>
+		<instruction type="file">files.tar</instruction>
+		<instruction type="language">language/*.xml</instruction>
+                
+		<!-- xml -->
+		<instruction type="acpMenu">acpMenu.xml</instruction>
+	</instructions>
+</package>

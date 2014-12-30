@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en" languagename="English" countrycode="en">
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.log.modification"><![CDATA[Global Modificationlog]]></item>
+	</category>
+        
+	<category name="wcf.acp.modification">
+		<item name="wcf.acp.modification.log.user"><![CDATA[User]]></item>
+		<item name="wcf.acp.modification.log.action"><![CDATA[Action]]></item>
+		<item name="wcf.acp.modification.log.object"><![CDATA[Object]]></item>
+		<item name="wcf.acp.modification.log.object.unknown"><![CDATA[Unknown]]></item>
+		<item name="wcf.acp.modification.log.time"><![CDATA[Date]]></item>
+                <item name="wcf.acp.modification.log.filter"><![CDATA[Filter]]></item>
+                <item name="wcf.acp.modification.log.filter.objectType"><![CDATA[Object Type]]></item>
+                <item name="wcf.acp.modification.log.filter.user"><![CDATA[Username]]></item>
+		<item name="wcf.acp.modification.log.filter.objectType.all"><![CDATA[All]]></item>
+                <item name="wcf.acp.modification.log.filter.objectType.post"><![CDATA[Posts]]></item>
+		<item name="wcf.acp.modification.log.filter.objectType.thread"><![CDATA[Threads]]></item>
+		
+		<!-- thread -->
+		<item name="wcf.acp.modification.log.wbb.thread.close"><![CDATA[Closed the thread]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.delete"><![CDATA[Deleted the thread „{$additionalData.topic}“]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.done"><![CDATA[Marked the thread as done]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.enable"><![CDATA[Approved the thread]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.disable"><![CDATA[Disabled the thread]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.move"><![CDATA[Moved the thread from forum <a href="{link application='wbb' controller='Board' id=$additionalData[oldBoard][boardID] title=$additionalData[oldBoard][title]|language}{/link}">{$additionalData[oldBoard][title]|language}</a> to forum <a href="{link application='wbb' controller='Board' id=$additionalData[newBoard][boardID] title=$additionalData[newBoard][title]|language}{/link}">{$additionalData[newBoard][title]|language}</a>]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.open"><![CDATA[Opened the thread]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.restore"><![CDATA[Restored the thread]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.trash"><![CDATA[Moved the thread to trash bin{if $additionalData[reason]}: {$additionalData[reason]}{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.setLabel"><![CDATA[Set the Label to <span class="badge label{if $additionalData[label]->cssClassName} {$additionalData[label]->cssClassName}{/if}">{$additionalData[label]->label|language}</span>]]></item>
+		
+		<!-- post -->
+		<item name="wcf.acp.modification.log.wbb.post.close"><![CDATA[Closed {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> von <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.delete"><![CDATA[Deleted a post]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.enable"><![CDATA[Approved {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.disable"><![CDATA[Disabled {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.open"><![CDATA[Opened {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.restore"><![CDATA[Restored {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.trash"><![CDATA[Trashed {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+		<item name="wcf.acp.modification.log.wbb.post.edit"><![CDATA[Edited {if $post->postID}the <a href="{link application='wbb' controller='Thread' forceFrontend=true appendSession=false id=$post->threadID}postID={@$post->postID}#post{@$post->postID}{/link}" class="wbbPostLink" data-post-id="{@$post->postID}">post „{$post->getTitle()}“</a> by <a href="{link controller='User' forceFrontend=true appendSession=false id=$post->userID title=$post->username}{/link}" class="userLink" data-user-id="{@$post->userID}">{$post->username}</a>{else}a post{/if}]]></item>
+	</category>
+</language>
