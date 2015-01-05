@@ -21,6 +21,7 @@
 		<item name="wcf.acp.modification.log.wbb.thread.close"><![CDATA[Closed the thread]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.delete"><![CDATA[Deleted the thread „{$additionalData.topic}“]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.done"><![CDATA[Marked the thread as done]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.undone"><![CDATA[Marked the thread as undone]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.enable"><![CDATA[Approved the thread]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.disable"><![CDATA[Disabled the thread]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.move"><![CDATA[Moved the thread from forum <a href="{link application='wbb' controller='Board' id=$additionalData[oldBoard][boardID] title=$additionalData[oldBoard][title]|language}{/link}">{$additionalData[oldBoard][title]|language}</a> to forum <a href="{link application='wbb' controller='Board' id=$additionalData[newBoard][boardID] title=$additionalData[newBoard][title]|language}{/link}">{$additionalData[newBoard][title]|language}</a>]]></item>

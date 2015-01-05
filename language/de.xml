@@ -21,6 +21,7 @@
 		<item name="wcf.acp.modification.log.wbb.thread.close"><![CDATA[Hat das Thema geschlossen.]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.delete"><![CDATA[Hat das Thema „{$additionalData.topic}“ gelöscht.]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.done"><![CDATA[Hat das Thema als erledigt markiert.]]></item>
+		<item name="wcf.acp.modification.log.wbb.thread.undone"><![CDATA[Hat das Thema als unerledigt markiert.]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.enable"><![CDATA[Hat das Thema aktiviert.]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.disable"><![CDATA[Hat das Thema deaktiviert.]]></item>
 		<item name="wcf.acp.modification.log.wbb.thread.move"><![CDATA[Hat das Thema{if $additionalData.oldBoard|isset} aus dem Forum <a href="{link application='wbb' controller='Board' forceFrontend=true appendSession=false id=$additionalData[oldBoard][boardID]}{/link}">{$additionalData[oldBoard][title]|language}</a>{/if}{if $additionalData.newBoard|isset} nach <a href="{link application='wbb' controller='Board' forceFrontend=true appendSession=false id=$additionalData[newBoard][boardID]}{/link}">{$additionalData[newBoard][title]|language}</a>{/if} verschoben.]]></item>
