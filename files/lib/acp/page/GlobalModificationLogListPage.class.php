@@ -23,7 +23,10 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 	public $userIDs = array();
 	public $usernames = array();
 	public $objectType = null; 
-
+	public $startDate = null; 
+	public $endDate = null; 
+	public $action = null; 
+	
 	/**
 	 * valid objectTypes 
 	 * 
@@ -57,6 +60,9 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 		}
 		
 		if (isset($_REQUEST['objectType'])) $this->objectType = \wcf\util\StringUtil::trim($_REQUEST['objectType']);
+		if (isset($_REQUEST['action'])) $this->action = $_REQUEST['action']; 
+		if (isset($_REQUEST['startDate'])) $this->startDate = $_REQUEST['startDate'];
+		if (isset($_REQUEST['endDate'])) $this->endDate = $_REQUEST['endDate'];
 		
 		$this->validate(); 
 	}
@@ -80,6 +86,14 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 				$this->usernames[] = $user->username; 
 			}
 		}
+		
+		if (@strtotime($this->startDate) === false) {
+			$this->startDate = null; 
+		}
+		
+		if (@strtotime($this->endDate) === false) {
+			$this->endDate = null; 
+		}
 	}
 	
 	/**
@@ -94,6 +108,18 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 		
 		if (!empty($this->objectType)) {
 			$this->objectList->getConditionBuilder()->add('objectTypeID = ?', array(\wcf\data\object\type\ObjectTypeCache::getInstance()->getObjectTypeIDByName('com.woltlab.wcf.modifiableContent', $this->objectType)));
+		}
+		
+		if (!empty($this->action)) {
+			$this->objectList->getConditionBuilder()->add('action = ?', array($this->action));
+		}
+		
+		if (!empty($this->startDate)) {
+			$this->objectList->getConditionBuilder()->add('time > ?', array(strtotime($this->startDate)));
+		}
+		
+		if (!empty($this->endDate)) {
+			$this->objectList->getConditionBuilder()->add('time < ?', array(strtotime($this->endDate)));
 		}
 	}
 	
@@ -111,10 +137,25 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 			$this->urlGETFilter .= '&objectType='. \wcf\util\StringUtil::encodeHTML($this->objectType); 
 		}
 		
+		if (!empty($this->action)) {
+			$this->urlGETFilter .= '&action='. \wcf\util\StringUtil::encodeHTML($this->action);
+		}
+		
+		if (!empty($this->startDate)) {
+			$this->urlGETFilter .= '&startDate='. \wcf\util\StringUtil::encodeHTML($this->startDate);
+		}
+		
+		if (!empty($this->endDate)) {
+			$this->urlGETFilter .= '&endDate='. \wcf\util\StringUtil::encodeHTML($this->endDate);
+		}
+		
 		\wcf\system\WCF::getTPL()->assign(array(
 			'usernames' => $this->usernames, 
 			'objectType' => $this->objectType, 
-			'filter' => $this->urlGETFilter 
+			'filter' => $this->urlGETFilter,
+			'startDate' => $this->startDate,
+			'endDate' => $this->endDate, 
+			'action' => $this->action
 		));
 	}
 }

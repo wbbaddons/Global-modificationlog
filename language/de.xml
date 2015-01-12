@@ -16,6 +16,25 @@
 		<item name="wcf.acp.modification.log.filter.objectType.all"><![CDATA[Alles]]></item>
                 <item name="wcf.acp.modification.log.filter.objectType.post"><![CDATA[Beiträge]]></item>
 		<item name="wcf.acp.modification.log.filter.objectType.thread"><![CDATA[Themen]]></item>
+		<item name="wcf.acp.modification.log.filter.action"><![CDATA[Aktion]]></item>
+		<item name="wcf.acp.modification.log.filter.timeframe"><![CDATA[Zeitfenster]]></item>
+		<item name="wcf.acp.modification.log.filter.timeframe.start"><![CDATA[von]]></item>
+		<item name="wcf.acp.modification.log.filter.timeframe.end"><![CDATA[bis]]></item>
+
+		
+		<!-- actions -->
+		<item name="wcf.acp.modification.log.action.close"><![CDATA[Geschlossen]]></item>
+		<item name="wcf.acp.modification.log.action.open"><![CDATA[Geöffnet]]></item>
+		<item name="wcf.acp.modification.log.action.delete"><![CDATA[Gelöscht]]></item>
+		<item name="wcf.acp.modification.log.action.trash"><![CDATA[In den Papierkorb verschoben]]></item>
+		<item name="wcf.acp.modification.log.action.restore"><![CDATA[Wiederhergestellt]]></item>
+		<item name="wcf.acp.modification.log.action.done"><![CDATA[Als erledigt markiert]]></item>
+		<item name="wcf.acp.modification.log.action.undone"><![CDATA[Als unerledigt markiert]]></item>
+		<item name="wcf.acp.modification.log.action.move"><![CDATA[Verschoben]]></item>
+		<item name="wcf.acp.modification.log.action.setLabel"><![CDATA[ein Label gesetzt]]></item>
+		<item name="wcf.acp.modification.log.action.enable"><![CDATA[Aktiviert]]></item>
+		<item name="wcf.acp.modification.log.action.disable"><![CDATA[Deaktiviert]]></item>
+		<item name="wcf.acp.modification.log.action.edit"><![CDATA[Bearbeitet]]></item>
 		
 		<!-- thread -->
 		<item name="wcf.acp.modification.log.wbb.thread.close"><![CDATA[Hat das Thema geschlossen.]]></item>

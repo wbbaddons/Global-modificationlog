@@ -25,6 +25,48 @@
 					<dt>{lang}wcf.acp.modification.log.filter.user{/lang}</dt>
 					<dd><input type="text" id="username" name="username" value="{implode from=$usernames item=username glue=", "}{$username}{/implode}" class="long"></dd>
 				</dl>
+				<dl>
+					<dt>{lang}wcf.acp.modification.log.filter.action{/lang}</dt>
+					<dd>
+						<select id="objectAction" name="action">
+						</select>
+					</dd>
+					<script data-relocate="true" src="{@$__wcf->getPath()}acp/js/be.bastelstu.josh.globalmodificationlog.js?v={$__wcfVersion}"></script>
+					<script data-relocate="true">
+						$action = new be.bastelstu.josh.globalmodificationlog.Handler("#objectAction", "#objectType");
+						
+						WCF.Language.addObject({
+							'wcf.acp.modification.log.action.close': '{lang}wcf.acp.modification.log.action.close{/lang}',
+							'wcf.acp.modification.log.action.open': '{lang}wcf.acp.modification.log.action.open{/lang}',					
+							'wcf.acp.modification.log.action.delete': '{lang}wcf.acp.modification.log.action.delete{/lang}',
+							'wcf.acp.modification.log.action.trash': '{lang}wcf.acp.modification.log.action.trash{/lang}',
+							'wcf.acp.modification.log.action.restore': '{lang}wcf.acp.modification.log.action.restore{/lang}',
+							'wcf.acp.modification.log.action.done': '{lang}wcf.acp.modification.log.action.done{/lang}',
+							'wcf.acp.modification.log.action.undone': '{lang}wcf.acp.modification.log.action.undone{/lang}',
+							'wcf.acp.modification.log.action.move': '{lang}wcf.acp.modification.log.action.move{/lang}',
+							'wcf.acp.modification.log.action.setLabel': '{lang}wcf.acp.modification.log.action.setLabel{/lang}',
+							'wcf.acp.modification.log.action.enable': '{lang}wcf.acp.modification.log.action.enable{/lang}',
+							'wcf.acp.modification.log.action.disable': '{lang}wcf.acp.modification.log.action.disable{/lang}',
+							'wcf.acp.modification.log.action.edit': '{lang}wcf.acp.modification.log.action.edit{/lang}'
+						});
+						
+						// add options
+						{literal}$action.addOption("close",{"com.woltlab.wbb.post":!0,"com.woltlab.wbb.thread":!0}),$action.addOption("delete",{"com.woltlab.wbb.post":!0,"com.woltlab.wbb.thread":!0}),$action.addOption("trash",{"com.woltlab.wbb.post":!0,"com.woltlab.wbb.thread":!0}),$action.addOption("restore",{"com.woltlab.wbb.post":!0,"com.woltlab.wbb.thread":!0}),$action.addOption("done",{"com.woltlab.wbb.thread":!0}),$action.addOption("undone",{"com.woltlab.wbb.thread":!0}),$action.addOption("move",{"com.woltlab.wbb.thread":!0}),$action.addOption("setLabel",{"com.woltlab.wbb.thread":!0}),$action.addOption("enable",{"com.woltlab.wbb.thread":!0,"com.woltlab.wbb.post":!0}),$action.addOption("disable",{"com.woltlab.wbb.thread":!0,"com.woltlab.wbb.post":!0}),$action.addOption("edit",{"com.woltlab.wbb.post":!0});{/literal}
+						
+						{if $action}
+							$action.selectAction("{$action}");
+						{/if}
+						
+						{event name='globalmodificationlogJS'}
+					</script>
+				</dl>
+				<dl>
+					<dt><label for="timeAfter">{lang}wcf.acp.modification.log.filter.timeframe{/lang}</label></dt>
+					<dd>
+						<input type="date" id="startDate" name="startDate" value="{$startDate}" placeholder="{lang}wcf.acp.modification.log.filter.timeframe.start{/lang}" />
+						<input type="date" id="endDate" name="endDate" value="{$endDate}" placeholder="{lang}wcf.acp.modification.log.filter.timeframe.end{/lang}" />
+					</dd>
+				</dl>
 			</fieldset>
 	</div>
 
@@ -42,7 +84,7 @@
 	<nav>
 		<ul>
 			{content}
-			{event name='contentNavigationButtonsTop'}
+				{event name='contentNavigationButtonsTop'}
 			{/content}
 		</ul>
 	</nav>
