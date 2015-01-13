@@ -28,8 +28,7 @@
 			console.log("unable to find actionOption") unless @actionOption.length
 			console.log("unable to find objectTypeButton") unless @objectTypeButton.length
 			
-			_t = @
-			@objectTypeButton.on 'change', => _t.changeObjectType do _t.objectTypeButton.val
+			@objectTypeButton.on 'change', => @changeObjectType do @objectTypeButton.val
 			
 			# first init the actionInput
 			#@changeObjectType @objectTypeButton.val
