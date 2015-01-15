@@ -75,6 +75,10 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 			$this->objectType = null; 
 		}
 		
+		if ($this->action == 'all') {
+			$this->action = null; 
+		}
+		
 		if (count($this->usernames)) {
 			$userList = new \wcf\data\user\UserList(); 
 			$userList->getConditionBuilder()->add('username IN (?)', array($this->usernames)); 

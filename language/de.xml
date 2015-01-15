@@ -23,6 +23,7 @@
 
 		
 		<!-- actions -->
+		<item name="wcf.acp.modification.log.action.all"><![CDATA[Alle]]></item>
 		<item name="wcf.acp.modification.log.action.close"><![CDATA[Geschlossen]]></item>
 		<item name="wcf.acp.modification.log.action.open"><![CDATA[Geöffnet]]></item>
 		<item name="wcf.acp.modification.log.action.delete"><![CDATA[Gelöscht]]></item>
