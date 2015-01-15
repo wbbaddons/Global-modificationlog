@@ -154,7 +154,7 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 			'objectType' => $this->objectType, 
 			'filter' => $this->urlGETFilter,
 			'startDate' => $this->startDate,
-			'endDate' => $this->endDate, 
+			'endDate' => $this->endDate,
 			'action' => $this->action
 		));
 	}
