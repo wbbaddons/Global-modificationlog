@@ -19,6 +19,21 @@ class GlobalModificationLogListPage extends \wcf\page\SortablePage {
 	 */
 	public $neededPermissions = array('admin.system.canViewLog');
 	
+	/**
+	 * see \wcf\page\SortablePage::$defaultSortField
+	 */
+	public $defaultSortField = 'time';
+	
+	/**
+	 * see \wcf\page\SortablePage::$defaultSortOrder
+	 */
+	public $defaultSortOrder = 'DESC';
+	
+	/**
+	 * see \wcf\page\SortablePage::$validSortFields
+	 */
+	public $validSortFields = array('time');
+	
 	// Filter:
 	public $userIDs = array();
 	public $usernames = array();
