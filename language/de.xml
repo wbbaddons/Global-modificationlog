@@ -31,7 +31,7 @@
 		<item name="wcf.acp.modification.log.action.done"><![CDATA[Als erledigt markiert]]></item>
 		<item name="wcf.acp.modification.log.action.undone"><![CDATA[Als unerledigt markiert]]></item>
 		<item name="wcf.acp.modification.log.action.move"><![CDATA[Verschoben]]></item>
-		<item name="wcf.acp.modification.log.action.setLabel"><![CDATA[ein Label gesetzt]]></item>
+		<item name="wcf.acp.modification.log.action.setLabel"><![CDATA[Ein Label gesetzt]]></item>
 		<item name="wcf.acp.modification.log.action.enable"><![CDATA[Aktiviert]]></item>
 		<item name="wcf.acp.modification.log.action.disable"><![CDATA[Deaktiviert]]></item>
 		<item name="wcf.acp.modification.log.action.edit"><![CDATA[Bearbeitet]]></item>
