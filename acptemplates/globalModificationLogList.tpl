@@ -36,6 +36,7 @@
 						$action = new be.bastelstu.josh.globalmodificationlog.Handler("#objectAction", "#objectType");
 						
 						WCF.Language.addObject({
+							'wcf.acp.modification.log.action.all': '{lang}wcf.acp.modification.log.action.all{/lang}',
 							'wcf.acp.modification.log.action.close': '{lang}wcf.acp.modification.log.action.close{/lang}',
 							'wcf.acp.modification.log.action.open': '{lang}wcf.acp.modification.log.action.open{/lang}',					
 							'wcf.acp.modification.log.action.delete': '{lang}wcf.acp.modification.log.action.delete{/lang}',
@@ -122,7 +123,7 @@
 						<td class="columnIcon columnUsername">
 							{if $log->getUserProfile() && $log->getUserProfile()->getAvatar()}
 								{if $log->getUserProfile()->userID != 0}<a href="{link controller='UserEdit' id=$log->getUserProfile()->userID}{/link}">{$log->username}</a>{else}<em>{$log->username}</em>{/if}
-								{/if}
+							{/if}
 						</td>
 						<td class="columnTitle columnAction">{@$log}</td>
 						<td class="columnTitle columnObject">{if $log->getObject() && $log->getObject()->getObjectID() != 0}<a href="{$log->getObject()->getLink()}">{$log->getObject()->getTitle()}</a>{else}<em>{lang}wcf.acp.modification.log.object.unknown{/lang}</em>{/if}</td>
@@ -142,7 +143,7 @@
 		<nav>
 			<ul>	
 				{content}
-				{event name='contentNavigationButtonsBottom'}
+					{event name='contentNavigationButtonsBottom'}
 				{/content}
 			</ul>
 		</nav>
