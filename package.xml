@@ -5,8 +5,8 @@
                 <packagename language="de"><![CDATA[Globales Änderungsprotokoll]]></packagename>
 		<packagedescription><![CDATA[This plugin provides a global change log in the ACP.]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Dieses Plugin stellt ein globales Änderungsprotokoll im ACP bereit.]]></packagedescription>
-		<version>1.0.0</version>
-		<date>2015-01-13</date>
+		<version>1.0.1</version>
+		<date>2015-01-18</date>
 		<license><![CDATA[GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>]]></license>
 	</packageinformation>
 
@@ -27,7 +27,7 @@
 		<instruction type="acpMenu">acpMenu.xml</instruction>
 	</instructions>
 	
-	<instructions type="update" fromversion="1.0.0 Beta 1">
+	<instructions type="update" fromversion="1.0.0">
 		<instruction type="acpTemplate">acptemplates.tar</instruction>
 		<instruction type="file">files.tar</instruction>
 		<instruction type="language">language/*.xml</instruction>
