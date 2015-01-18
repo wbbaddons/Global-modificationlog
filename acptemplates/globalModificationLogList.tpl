@@ -104,7 +104,7 @@
 					<th class="columnTitle columnUser" colspan="2">{lang}wcf.acp.modification.log.user{/lang}</th>
 					<th class="columnTitle columnAction">{lang}wcf.acp.modification.log.action{/lang}</th>
 					<th class="columnTitle columnObject">{lang}wcf.acp.modification.log.object{/lang}</th>
-					<th class="columnDate columnTime{if $sortField == 'time'} active {@$sortOrder}{/if}"><a href="{link controller='GlobalModificationLogList'}pageNo={@$pageNo}&sortField=time&sortOrder={if $sortField == 'time' && $sortOrder == 'ASC'}DESC{else}ASC{/if}{$filter}{/link}">{lang}wcf.acp.modification.log.time{/lang}</a></th>
+					<th class="columnDate columnTime{if $sortField == 'time'} active {@$sortOrder}{/if}"><a href="{link controller='GlobalModificationLogList'}pageNo={@$pageNo}&sortField=time&sortOrder={if $sortField == 'time' && $sortOrder == 'ASC'}DESC{else}ASC{/if}{@$filter}{/link}">{lang}wcf.acp.modification.log.time{/lang}</a></th>
 
 					{event name='columnHeads'}
 				</tr>
